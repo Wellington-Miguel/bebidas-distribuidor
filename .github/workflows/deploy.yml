@@ -53,6 +53,7 @@ jobs:
         env:
           DATABASE_URL: postgresql://test:test@localhost/bebidas_test
           REDIS_URL:    redis://localhost:6379
+          PYTHONPATH:   .
         run: pytest services/ shared/ -v --tb=short
 
   # ── Build e Push para ECR ─────────────────────────────────────────────────────
